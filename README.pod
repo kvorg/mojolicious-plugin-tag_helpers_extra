@@ -1,0 +1,60 @@
+=head1 NAME
+
+Mojolicious::Plugin::TagHelpersExtra - Extra Tag Helpers Plugin
+
+=head1 SYNOPSIS
+
+    # Mojolicious
+    $self->plugin('tag_helpers_extra');
+
+    # Mojolicious::Lite
+    plugin 'tag_helpers_extra';
+
+=head1 DESCRIPTION
+
+L<Mojolicous::Plugin::TagHelpersExtra> is a collection of additional
+HTML5 tag helpers for L<Mojolicious>.  Note that this module hopes to
+be sublimated into L<Mojolicous::Plugin::TagHelpers> without warning!
+
+See L<Mojolicious/Plugin/TagHelpersExtra> for documentation.
+
+=head2 Helpers
+
+=over 4
+
+=item link_to_here
+
+Generates a link to the current request URL, including any GET query
+parameters, and allows addition/deletion/modification of said
+parameters.
+
+=item check_box_x
+
+Generates a checkbox input element with value, and parse parameters
+according to multiple choices. The attribute 'checked' can be used to
+set a default value for the form, to be overruled if a parameter of
+the same name is set.
+
+=item radio_x
+
+Generates a radio button input element with value and parse parameters
+accoring to multiple choices. The attribute 'checked' can be used to
+set a default value for the form, to be overruled if a parameter of
+the same name is set.
+
+=item table
+
+Generates a table from a reference to an array of array rows, or,
+alternatively, an array ref generating subroutine reference specified
+in the C<sub> attribute. Headers, footers, attributes and captions are
+supported.
+
+=back
+
+=head1 SEE ALSO
+
+L<Mojolicious::Plugin::TagHelpers>, L<Mojolicious>,
+L<Mojolicious::Guides>, L<http://mojolicious.org>.
+
+=cut
+
